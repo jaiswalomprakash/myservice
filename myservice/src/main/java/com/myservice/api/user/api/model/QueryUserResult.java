@@ -8,7 +8,7 @@ import java.util.Set;
 /**
  * API model for returning user details.
  *
- * @author cassiomolin
+ * @author omprakash
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class QueryUserResult {

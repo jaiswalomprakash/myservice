@@ -3,7 +3,7 @@ package com.myservice.api.security.exception;
 /**
  * Thrown if an authentication token cannot be refreshed.
  *
- * @author cassiomolin
+ * @author omprakash
  */
 public class AuthenticationTokenRefreshmentException extends RuntimeException {
 

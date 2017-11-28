@@ -19,7 +19,7 @@ import com.myservice.api.security.api.model.UserCredentials;
 /**
  * Tests for the authentication resource class.
  *
- * @author cassiomolin
+ * @author omprakash
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)

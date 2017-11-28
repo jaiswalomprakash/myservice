@@ -24,7 +24,7 @@ import java.util.stream.StreamSupport;
 /**
  * JAX-RS resource class for users.
  *
- * @author cassiomolin
+ * @author omprakash
  */
 @Component
 @Path("users")

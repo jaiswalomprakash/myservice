@@ -3,7 +3,7 @@ package com.myservice.api.security.api.model;
 /**
  * API model for an authentication token.
  *
- * @author cassiomolin
+ * @author omprakash
  */
 public class AuthenticationToken {
 

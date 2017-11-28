@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 /**
  * Service for greetings.
  *
- * @author cassiomolin
+ * @author omprakash
  */
 @Service
 public class GreetingService {

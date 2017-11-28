@@ -15,7 +15,7 @@ import javax.ws.rs.ext.Provider;
 /**
  * Exception mapper for {@link AccessDeniedException}s.
  *
- * @author cassiomolin
+ * @author omprakash
  */
 @Provider
 public class AccessDeniedExceptionMapper implements ExceptionMapper<AccessDeniedException> {

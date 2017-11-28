@@ -15,7 +15,7 @@ import com.myservice.api.AbstractApiTest;
 /**
  * Tests for the greeting resource class.
  *
- * @author cassiomolin
+ * @author omprakash
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)

@@ -27,7 +27,7 @@ import com.myservice.api.user.api.model.QueryUserResult;
 /**
  * Tests for the user resource class.
  *
- * @author cassiomolin
+ * @author omprakash
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 /**
  * Settings for signing and verifying JWT tokens.
  *
- * @author cassiomolin
+ * @author omprakash
  */
 @Component
 class JwtSettings {

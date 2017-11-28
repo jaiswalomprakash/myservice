@@ -8,7 +8,7 @@ import com.myservice.api.user.domain.User;
 /**
  * Repository for {@link User}s.
  *
- * @author cassiomolin
+ * @author omprakash
  */
 public interface UserRepository extends CrudRepository<User, Long> {
 

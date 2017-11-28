@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 /**
  * API model that represents an error.
  *
- * @author cassiomolin
+ * @author omprakash
  */
 @JsonInclude(Include.NON_NULL)
 public class ApiErrorDetails {

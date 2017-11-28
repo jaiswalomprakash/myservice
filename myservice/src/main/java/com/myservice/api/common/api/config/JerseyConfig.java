@@ -16,7 +16,7 @@ import com.myservice.api.user.api.resource.UserResource;
 /**
  * Jersey configuration class.
  *
- * @author cassiomolin
+ * @author omprakash
  */
 @Component
 @ApplicationPath("api")

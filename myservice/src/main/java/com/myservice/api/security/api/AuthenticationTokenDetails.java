@@ -10,7 +10,7 @@ import com.myservice.api.security.domain.Authority;
 /**
  * Application model that holds details about an authentication token.
  *
- * @author cassiomolin
+ * @author omprakash
  */
 public final class AuthenticationTokenDetails {
 

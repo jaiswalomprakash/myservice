@@ -10,7 +10,7 @@ import java.util.Set;
 /**
  * Domain model that represents a user.
  *
- * @author cassiomolin
+ * @author omprakash
  */
 @Entity
 public class User implements Serializable {

@@ -16,7 +16,7 @@ import java.util.UUID;
 /**
  * Default implementation for the {@link AuthenticationTokenService}.
  *
- * @author cassiomolin
+ * @author omprakash
  */
 @Service
 public class DefaultAuthenticationTokenService implements AuthenticationTokenService {

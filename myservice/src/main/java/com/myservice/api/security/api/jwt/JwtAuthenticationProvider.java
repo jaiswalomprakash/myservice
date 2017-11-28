@@ -14,7 +14,7 @@ import com.myservice.api.security.service.AuthenticationTokenService;
 /**
  * Authentication provider for JWT token-based authentication.
  *
- * @author cassiomolin
+ * @author omprakash
  */
 @Component
 public class JwtAuthenticationProvider implements AuthenticationProvider {

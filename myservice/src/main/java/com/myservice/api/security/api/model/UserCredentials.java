@@ -3,7 +3,7 @@ package com.myservice.api.security.api.model;
 /**
  * API model user credentials.
  *
- * @author cassiomolin
+ * @author omprakash
  */
 public class UserCredentials {
 

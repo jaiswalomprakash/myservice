@@ -11,7 +11,7 @@ import java.util.Set;
 /**
  * Default implementation for the {@link UserDetails} interface.
  *
- * @author cassiomolin
+ * @author omprakash
  */
 public final class AuthenticatedUserDetails implements UserDetails, CredentialsContainer {
 
@@ -70,7 +70,7 @@ public final class AuthenticatedUserDetails implements UserDetails, CredentialsC
     /**
      * Builder for the {@link AuthenticatedUserDetails} class.
      *
-     * @author cassiomolin
+     * @author omprakash
      */
     public static class Builder {
 

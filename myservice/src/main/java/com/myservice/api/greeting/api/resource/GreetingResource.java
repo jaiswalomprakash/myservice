@@ -16,7 +16,7 @@ import javax.ws.rs.core.Response;
 /**
  * JAX-RS resource class for greetings.
  *
- * @author cassiomolin
+ * @author omprakash
  */
 @Component
 @Path("greetings")

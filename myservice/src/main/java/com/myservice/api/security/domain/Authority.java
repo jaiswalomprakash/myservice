@@ -5,7 +5,7 @@ import com.myservice.api.user.domain.User;
 /**
  * Authorities that can be granted to a {@link User}.
  *
- * @author cassiomolin
+ * @author omprakash
  */
 public enum Authority {
     ADMIN, USER

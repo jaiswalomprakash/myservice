@@ -14,7 +14,7 @@ import com.myservice.api.security.exception.AuthenticationTokenRefreshmentExcept
 /**
  * Exception mapper for {@link AuthenticationTokenRefreshmentException}s.
  *
- * @author cassiomolin
+ * @author omprakash
  */
 @Provider
 public class AuthenticationTokenRefreshmentExceptionMapper implements ExceptionMapper<AuthenticationTokenRefreshmentException> {

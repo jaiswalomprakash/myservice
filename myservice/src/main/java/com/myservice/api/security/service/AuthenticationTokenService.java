@@ -8,7 +8,7 @@ import com.myservice.api.security.domain.Authority;
 /**
  * Service which provides operations for authentication tokens.
  *
- * @author cassiomolin
+ * @author omprakash
  */
 public interface AuthenticationTokenService {
 

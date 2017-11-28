@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Service for {@link User}s.
  *
- * @author cassiomolin
+ * @author omprakash
  */
 @Service
 public class UserService {

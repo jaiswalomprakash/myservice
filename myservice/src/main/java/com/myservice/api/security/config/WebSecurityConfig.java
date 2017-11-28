@@ -22,7 +22,7 @@ import com.myservice.api.security.api.jwt.JwtAuthenticationTokenFilter;
 /**
  * Spring Security configuration class.
  *
- * @author cassiomolin
+ * @author omprakash
  */
 @Configuration
 @EnableWebSecurity

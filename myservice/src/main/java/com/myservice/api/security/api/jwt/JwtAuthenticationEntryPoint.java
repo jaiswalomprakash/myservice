@@ -19,7 +19,7 @@ import java.io.IOException;
 /**
  * Entry point for JWT token-based authentication. Simply returns error details related to authentication failures.
  *
- * @author cassiomolin
+ * @author omprakash
  */
 @Component
 public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint {

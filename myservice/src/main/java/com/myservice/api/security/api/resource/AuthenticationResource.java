@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
 /**
  * JAX-RS resource class for authentication. Username and password are exchanged for an authentication token.
  *
- * @author cassiomolin
+ * @author omprakash
  */
 @Component
 @Path("auth")
