@@ -1,0 +1,91 @@
+spring:
+  profiles.active: development
+
+---
+spring:
+  profiles: development
+  datasource:
+    url: jdbc:mysql://localhost/testme
+    username: root
+    password: admin
+    driverClassName: com.mysql.jdbc.Driver
+    test-on-borrow: true
+    test-while-idle: true
+    validation-query: select 1;
+    maxActive: 1
+  jpa:
+    show-sql: true
+    #generate-ddl: false   
+    hibernate:
+        #dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        #ddl-auto: validate
+        ddl-auto: create-drop
+       
+server:
+  port: 8080
+logging:
+  file: logs/application-debug.log
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+    file: "%d %-5level [%thread] %logger : %msg%n"
+  level:
+    org.springframework.web: ERROR
+    com.howtodoinjava: DEBUG
+    org.hibernate: ERROR
+  output:
+    ansi:
+        enabled: DETECT
+
+---
+
+spring:
+  profiles: production
+  datasource:
+    url: jdbc:mysql://localhost/testme
+    username: root
+    password: admin
+    driverClassName: com.mysql.jdbc.Driver
+    test-on-borrow: true
+    test-while-idle: true
+    validation-query: select 1;
+    maxActive: 1
+  jpa:
+    show-sql: true
+    #generate-ddl: false   
+    hibernate:
+        #dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        #ddl-auto: validate
+        ddl-auto: create-drop
+       
+server:
+  port: 8080
+logging:
+  file: logs/application-debug.log
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+    file: "%d %-5level [%thread] %logger : %msg%n"
+  level:
+    org.springframework.web: ERROR
+    com.howtodoinjava: DEBUG
+    org.hibernate: ERROR
+  output:
+    ansi:
+        enabled: DETECT 
+   
+---  
+authentication:
+  jwt:
+    secret:       secret
+    issuer:       http://example.org
+    audience:     http://example.org
+    clockSkew:    10   # seconds
+    validFor:     3600 # seconds
+    refreshLimit: 1    # times
+    claimNames:
+      authorities:  authorities
+      refreshCount: refreshCount
+      refreshLimit: refreshLimit
+jackson:
+    serialization:
+      INDENT_OUTPUT: true     
+      
