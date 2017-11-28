@@ -16,7 +16,7 @@ import java.net.URI;
 /**
  * Base class for REST API testing.
  *
- * @author cassiomolin
+ * @author om
  */
 public abstract class AbstractApiTest {
 
