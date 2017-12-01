@@ -8,10 +8,10 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import com.myservice.api.entity.User;
 import com.myservice.api.security.api.AuthenticatedUserDetails;
 import com.myservice.api.security.domain.Authority;
-import com.myservice.api.user.domain.User;
-import com.myservice.api.user.service.UserService;
+import com.myservice.api.service.UserService;
 
 import java.util.Set;
 import java.util.stream.Collectors;

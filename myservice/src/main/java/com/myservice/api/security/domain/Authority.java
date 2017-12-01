@@ -1,6 +1,6 @@
 package com.myservice.api.security.domain;
 
-import com.myservice.api.user.domain.User;
+import com.myservice.api.entity.User;
 
 /**
  * Authorities that can be granted to a {@link User}.
@@ -8,5 +8,5 @@ import com.myservice.api.user.domain.User;
  * @author omprakash
  */
 public enum Authority {
-    ADMIN, USER
+    SUPER_USER,ADMIN,SITE_OWNER,USER
 }

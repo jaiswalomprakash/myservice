@@ -1,10 +1,10 @@
-package com.myservice.api.user.service;
+package com.myservice.api.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.myservice.api.user.domain.User;
-import com.myservice.api.user.repository.UserRepository;
+import com.myservice.api.entity.User;
+import com.myservice.api.repository.UserRepository;
 
 import java.util.ArrayList;
 import java.util.List;

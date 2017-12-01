@@ -21,8 +21,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.myservice.api.AbstractApiTest;
+import com.myservice.api.model.QueryUserResult;
 import com.myservice.api.security.domain.Authority;
-import com.myservice.api.user.api.model.QueryUserResult;
 
 /**
  * Tests for the user resource class.

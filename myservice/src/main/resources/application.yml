@@ -17,9 +17,10 @@ spring:
     show-sql: true
     #generate-ddl: false   
     hibernate:
+        ddl-auto: update
         #dialect: org.hibernate.dialect.MySQL5InnoDBDialect
         #ddl-auto: validate
-        ddl-auto: create-drop
+       
        
 server:
   port: 8080

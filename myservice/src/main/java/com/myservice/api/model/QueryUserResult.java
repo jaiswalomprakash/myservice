@@ -1,4 +1,4 @@
-package com.myservice.api.user.api.model;
+package com.myservice.api.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.myservice.api.security.domain.Authority;

@@ -1,11 +1,11 @@
-package com.myservice.api.greeting.api.resource;
+package com.myservice.api.resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
-import com.myservice.api.greeting.service.GreetingService;
+import com.myservice.api.service.GreetingService;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

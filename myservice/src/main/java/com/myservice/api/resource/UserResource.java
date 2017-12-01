@@ -1,4 +1,4 @@
-package com.myservice.api.user.api.resource;
+package com.myservice.api.resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -7,9 +7,9 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
-import com.myservice.api.user.api.model.QueryUserResult;
-import com.myservice.api.user.domain.User;
-import com.myservice.api.user.service.UserService;
+import com.myservice.api.entity.User;
+import com.myservice.api.model.QueryUserResult;
+import com.myservice.api.service.UserService;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
@@ -108,7 +108,7 @@ public class UserResource {
      */
     private QueryUserResult toQueryResult(User user) {
         QueryUserResult result = new QueryUserResult();
-        result.setId(user.getId());
+        result.setId(user.getUserId());
         result.setFirstName(user.getFirstName());
         result.setLastName(user.getLastName());
         result.setEmail(user.getEmail());

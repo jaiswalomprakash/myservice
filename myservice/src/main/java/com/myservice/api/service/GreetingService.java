@@ -1,4 +1,4 @@
-package com.myservice.api.greeting.service;
+package com.myservice.api.service;
 
 import org.springframework.stereotype.Service;
 

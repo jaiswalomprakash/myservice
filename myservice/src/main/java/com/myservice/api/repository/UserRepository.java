@@ -1,9 +1,9 @@
-package com.myservice.api.user.repository;
+package com.myservice.api.repository;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
-import com.myservice.api.user.domain.User;
+import com.myservice.api.entity.User;
 
 /**
  * Repository for {@link User}s.
