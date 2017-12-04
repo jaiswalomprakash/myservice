@@ -16,14 +16,14 @@ spring:
   jpa:
     show-sql: true
     #generate-ddl: false   
-    hibernate:
-        ddl-auto: update
+    #hibernate:
+        #ddl-auto: update
         #dialect: org.hibernate.dialect.MySQL5InnoDBDialect
         #ddl-auto: validate
        
        
 server:
-  port: 8080
+  port: 8081
 logging:
   file: logs/application-debug.log
   pattern:

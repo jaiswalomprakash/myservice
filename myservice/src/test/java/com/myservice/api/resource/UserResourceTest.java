@@ -1,4 +1,4 @@
-package com.myservicei.resource;
+package com.myservice.api.resource;
 
 import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.empty;
@@ -23,6 +23,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.myservice.api.AbstractApiTest;
 import com.myservice.api.model.QueryUserResult;
 import com.myservice.api.security.domain.Authority;
+
+
 
 /**
  * Tests for the user resource class.
@@ -97,7 +99,7 @@ public class UserResourceTest extends AbstractApiTest {
 
         QueryUserResult queryResults = response.readEntity(QueryUserResult.class);
         assertNotNull(queryResults);
-        assertEquals(userId, queryResults.getId());
+        assertEquals(userId, queryResults.getUserID());
     }
 
     @Test
@@ -107,7 +109,7 @@ public class UserResourceTest extends AbstractApiTest {
         assertEquals(Response.Status.OK.getStatusCode(), response.getStatus());
 
         QueryUserResult queryResults = response.readEntity(QueryUserResult.class);
-        assertNull(queryResults.getId());
+        assertNull(queryResults.getUserID());
         assertEquals("anonymousUser", queryResults.getUsername());
         assertThat(queryResults.getAuthorities(), is(empty()));
     }
@@ -122,7 +124,7 @@ public class UserResourceTest extends AbstractApiTest {
         assertEquals(Response.Status.OK.getStatusCode(), response.getStatus());
 
         QueryUserResult queryResults = response.readEntity(QueryUserResult.class);
-        assertNotNull(queryResults.getId());
+        assertNotNull(queryResults.getUserID());
         assertEquals("user", queryResults.getUsername());
         assertThat(queryResults.getAuthorities(), containsInAnyOrder(Authority.USER));
     }
@@ -137,7 +139,7 @@ public class UserResourceTest extends AbstractApiTest {
         assertEquals(Response.Status.OK.getStatusCode(), response.getStatus());
 
         QueryUserResult queryResults = response.readEntity(QueryUserResult.class);
-        assertNotNull(queryResults.getId());
+        assertNotNull(queryResults.getUserID());
         assertEquals("admin", queryResults.getUsername());
         assertThat(queryResults.getAuthorities(), containsInAnyOrder(Authority.USER, Authority.ADMIN));
     }

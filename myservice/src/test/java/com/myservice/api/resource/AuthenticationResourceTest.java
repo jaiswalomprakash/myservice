@@ -1,4 +1,4 @@
-package com.myservicei.resource;
+package com.myservice.api.resource;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -15,6 +15,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.myservice.api.AbstractApiTest;
 import com.myservice.api.security.api.model.AuthenticationToken;
 import com.myservice.api.security.api.model.UserCredentials;
+
 
 /**
  * Tests for the authentication resource class.

@@ -1,19 +1,21 @@
 package com.myservice.api.model;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.myservice.api.security.domain.Authority;
-
+import java.io.Serializable;
 import java.util.Set;
 
+import org.springframework.hateoas.ResourceSupport;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.myservice.api.security.domain.Authority;
 /**
  * API model for returning user details.
  *
  * @author omprakash
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class QueryUserResult {
+public class QueryUserResult extends ResourceSupport implements Serializable{
 
-    private Long id;
+    private Long userID;
     private String firstName;
     private String lastName;
     private String email;
@@ -21,15 +23,17 @@ public class QueryUserResult {
     private Set<Authority> authorities;
     private Boolean active;
 
-    public Long getId() {
-        return id;
-    }
+   
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    public Long getUserID() {
+		return userID;
+	}
 
-    public String getFirstName() {
+	public void setUserID(Long userID) {
+		this.userID = userID;
+	}
+
+	public String getFirstName() {
         return firstName;
     }
 

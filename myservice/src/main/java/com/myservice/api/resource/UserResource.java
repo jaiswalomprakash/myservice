@@ -1,6 +1,21 @@
 package com.myservice.api.resource;
 
+import java.util.HashSet;
+import java.util.List;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.NotFoundException;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriInfo;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.Resources;
+import org.springframework.hateoas.jaxrs.JaxRsLinkBuilder;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -10,16 +25,6 @@ import org.springframework.stereotype.Component;
 import com.myservice.api.entity.User;
 import com.myservice.api.model.QueryUserResult;
 import com.myservice.api.service.UserService;
-
-import javax.ws.rs.*;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.UriInfo;
-import java.util.HashSet;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 
 /**
  * JAX-RS resource class for users.
@@ -35,7 +40,8 @@ public class UserResource {
 
     @Autowired
     private UserService userService;
-
+    @Autowired
+    private UserAssembler userAssembler;
     /**
      * Get all users.
      *
@@ -43,16 +49,33 @@ public class UserResource {
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @PreAuthorize("hasAuthority('ADMIN')")
+   // @PreAuthorize("hasAuthority('ADMIN')")
     public Response getUsers() {
 
         Iterable<User> iterable = userService.findAllUsers();
-        List<QueryUserResult> queryDetailsList =
+       /* List<QueryUserResult> queryDetailsList =
                 StreamSupport.stream(iterable.spliterator(), false)
                         .map(this::toQueryResult)
                         .collect(Collectors.toList());
 
-        return Response.ok(queryDetailsList).build();
+        return Response.ok(userAssembler.toResources(iterable)).build();*/
+        
+        
+
+      
+        List<QueryUserResult> resources = userAssembler.toResources(iterable);
+
+        // wrap to add link
+        Resources<QueryUserResult> wrapped = new Resources<>(resources);
+        wrapped.add(
+                JaxRsLinkBuilder
+                        .linkTo(UserResource.class)
+                        .withSelfRel()
+        );
+
+        return Response.ok(wrapped).build();
+        
+       // return Response.ok(queryDetailsList).build();
     }
 
     /**
@@ -108,7 +131,7 @@ public class UserResource {
      */
     private QueryUserResult toQueryResult(User user) {
         QueryUserResult result = new QueryUserResult();
-        result.setId(user.getUserId());
+        result.setUserID(user.getUserId());
         result.setFirstName(user.getFirstName());
         result.setLastName(user.getLastName());
         result.setEmail(user.getEmail());
