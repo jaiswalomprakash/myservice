@@ -1,4 +1,4 @@
-package com.myservice.api.config;
+package com.myservice.api.resource.mapper;
 
 import org.springframework.hateoas.ResourceSupport;
 import org.springframework.hateoas.jaxrs.JaxRsLinkBuilder;

@@ -24,6 +24,7 @@ import org.springframework.stereotype.Component;
 
 import com.myservice.api.entity.User;
 import com.myservice.api.model.QueryUserResult;
+import com.myservice.api.resource.mapper.UserAssembler;
 import com.myservice.api.service.UserService;
 
 /**
@@ -131,7 +132,7 @@ public class UserResource {
      */
     private QueryUserResult toQueryResult(User user) {
         QueryUserResult result = new QueryUserResult();
-        result.setUserID(user.getUserId());
+        result.setUserID(user.getUserID());
         result.setFirstName(user.getFirstName());
         result.setLastName(user.getLastName());
         result.setEmail(user.getEmail());
